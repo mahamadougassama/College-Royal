@@ -1,0 +1,70 @@
+<section class="gestion-actualite">
+
+    <h1>
+        Gestion des actualités
+    </h1>
+
+
+    <div class="actualite-card">
+
+        <h2>
+            Publier une nouvelle actualité
+        </h2>
+
+
+        <form>
+
+            <div class="input-group">
+
+                <label>
+                    Titre
+                </label>
+
+                <input 
+                type="text"
+                placeholder="Titre de l'actualité" name="titre" [(ngModel)]="this.actualite.titre"
+                >
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Contenu
+                </label>
+
+                <textarea 
+                placeholder="Ecrire le contenu" name="contenue" [(ngModel)]="this.actualite.contenue">
+                </textarea>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Image
+                </label>
+
+                <input 
+                type="file" name="photo"
+                placeholder="Nom de l'image" (change)="selectionnerImage($event)" >
+
+            </div>
+
+
+
+            <button (click)="publier()">
+                Publier
+            </button>
+
+
+        </form>
+
+    </div>
+
+
+</section>

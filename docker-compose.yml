@@ -1,0 +1,55 @@
+services:
+  # 1. Base de données MySQL
+  db:
+    image: mysql:8.0
+    container_name: mysql_ecole
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    # ⚠️ Port NON exposé à l'extérieur — accessible uniquement par le backend
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$$DB_ROOT_PASSWORD || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    networks:
+      - appnet
+
+  # 2. Backend Spring Boot
+  backend:
+    build: ./backend
+    container_name: spring_backend_ecole
+    restart: unless-stopped
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/${DB_NAME}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=${DB_ROOT_PASSWORD}
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - appnet
+
+  # 3. Frontend Angular
+  frontend:
+    build: ./frontend
+    container_name: angular_frontend_ecole
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - appnet
+
+volumes:
+  mysql_data:
+
+networks:
+  appnet:
+    driver: bridge

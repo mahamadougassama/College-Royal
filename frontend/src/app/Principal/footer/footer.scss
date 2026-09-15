@@ -1,0 +1,127 @@
+.footer {
+
+    background-color: #620404;
+
+    color: white;
+
+    padding: 60px 8% 20px;
+
+}
+
+
+
+.footer-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+.footer-col {
+
+    width: 230px;
+
+}
+
+
+
+.footer-col h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.footer-col h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+
+    color: #FFC107;
+    cursor: pointer;
+
+}
+
+
+
+.footer-col p {
+
+    line-height: 1.7;
+
+    color: #ddd;
+
+}
+
+
+
+.footer-col a {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: white;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+
+}
+
+
+
+.footer-col a:hover {
+
+    color: #FFC107;
+
+    transform: translateX(5px);
+
+}
+.footer-col{
+    cursor: pointer;
+}
+
+
+
+
+/* Partie réseaux */
+
+.social a {
+
+    margin-bottom: 15px;
+
+}
+
+
+
+
+.footer-bottom {
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.3);
+
+    text-align: center;
+
+}
+
+
+
+.footer-bottom p {
+
+    color: #ddd;
+
+}

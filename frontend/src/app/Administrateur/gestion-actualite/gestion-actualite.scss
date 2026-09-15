@@ -1,0 +1,185 @@
+.gestion-actualite {
+
+    padding: 40px;
+
+    min-height: 100%;
+
+    background-color: #f5f6fa;
+
+}
+
+
+.gestion-actualite h1 {
+
+    text-align: center;
+
+    color: #0D47A1;
+
+    margin-bottom: 40px;
+
+    font-size: 35px;
+
+}
+
+
+
+/* Carte du formulaire */
+
+.actualite-card {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+
+
+.actualite-card h2 {
+
+    text-align: center;
+
+    color: #333;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* Groupe input */
+
+.input-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.input-group label {
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #0D47A1;
+
+}
+
+
+
+.input-group input,
+.input-group textarea {
+
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+}
+
+
+
+.input-group input:focus,
+.input-group textarea:focus {
+
+    border-color: #0D47A1;
+
+}
+
+
+
+.input-group textarea {
+
+    height: 150px;
+
+    resize: none;
+
+}
+
+
+
+/* Bouton publier */
+
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background-color: #0D47A1;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+button:hover {
+
+    background-color: #FFC107;
+
+    color: black;
+
+} .gestion-actualite {
+
+    padding: 30px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+}
+
+
+
+.actualite-card {
+
+    width: 90%;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    box-sizing: border-box;
+
+}

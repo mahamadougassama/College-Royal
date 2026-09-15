@@ -1,0 +1,64 @@
+<section class="gestion-contact">
+
+    <h1>
+        Messages des visiteurs
+    </h1>
+
+
+    <div class="contact-container">
+
+
+        <div class="contact-card" 
+             *ngFor="let l of list">
+
+
+            <div class="contact-header">
+
+                <div class="icon">
+                    👤
+                </div>
+
+                <div>
+                    <h2>
+                        {{l.nom}}
+                    </h2>
+
+                    <span>
+                        {{l.email}}
+                    </span>
+                </div>
+
+            </div>
+
+
+
+            <div class="message">
+
+                <h3>
+                    Message
+                </h3>
+
+                <p>
+                    {{l.message}}
+                </p>
+
+            </div>
+
+
+
+            <div class="actions">
+
+                <button class="delete" (click)="supprimer(l.id!)">
+                    Supprimer
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>

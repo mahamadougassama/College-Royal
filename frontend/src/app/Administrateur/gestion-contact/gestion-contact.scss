@@ -1,0 +1,165 @@
+.gestion-contact {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: 100vh;
+
+  h1 {
+    text-align: center;
+    color: #1e293b;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+}
+
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+
+/* Carte contact */
+.contact-card {
+
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+  transition: 0.3s;
+
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+}
+
+
+/* Partie utilisateur */
+.contact-header {
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+
+
+  .icon {
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+  }
+
+
+  h2 {
+
+    margin: 0;
+
+    color: #1e293b;
+
+    font-size: 20px;
+
+  }
+
+
+  span {
+
+    color: #64748b;
+
+    font-size: 14px;
+
+  }
+
+}
+
+
+
+/* Message */
+.message {
+
+  margin-top: 20px;
+
+
+  h3 {
+
+    color: #2563eb;
+
+    font-size: 17px;
+
+    margin-bottom: 10px;
+
+  }
+
+
+  p {
+
+    background: #f8fafc;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    color: #334155;
+
+    line-height: 1.6;
+
+    min-height: 80px;
+
+  }
+
+}
+
+
+
+/* Bouton */
+.actions {
+
+  margin-top: 20px;
+
+  text-align: right;
+
+
+  .delete {
+
+    background: #ef4444;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+
+    &:hover {
+
+      background: #dc2626;
+
+    }
+
+  }
+
+}

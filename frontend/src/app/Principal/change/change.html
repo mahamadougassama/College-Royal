@@ -1,0 +1,510 @@
+<section class="la-page">
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Bienvenue au Collège Royal 
+        </h1>
+
+        <p>
+            L'excellence académique de la reussite et de la performance.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a routerLink="/inscription" class="btn-primary">
+                Admissions
+            </a>
+
+            <a routerLink="/ressource" class="btn-secondary">
+                Découvrir nos actualités
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<section class="featured-news-section">
+    <div class="featured-container">
+        
+        <!-- En-tête discret de la section actualité accueil -->
+        <div class="featured-section-header">
+            <span class="section-badge">Actualité Récente</span>
+            <h2>À la Une du Collège Royal</h2>
+        </div>
+
+        <!-- Carte Unique "À la Une" -->
+        <div class="featured-news-card" *ngIf="derniereActualite">
+            
+            <!-- Côté Image -->
+            <div class="featured-img-wrap">
+                <!-- Remplacez le src par l'image de la dernière actualité -->
+                <img [src]="'http://localhost:8080/Image/'+derniereActualite.image" alt="Actualité à la une - Collège Royal">
+                <div class="live-badge">🔥 Dernière Actualité</div>
+            </div>
+
+            <!-- Côté Texte et Actions -->
+            <div class="featured-content">
+                
+                
+                <h3>{{derniereActualite.titre}}</h3>
+                
+                <p>{{derniereActualite.contenue}}</p>
+                
+                <div class="featured-actions">
+                    <!-- Redirige vers la page complète des actualités -->
+                    <a routerLink="/ressource" class="btn-main">Lire Toutes lles actualités →</a>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="atouts-section">
+    <div class="atouts-container">
+        
+        <!-- En-tête de section -->
+        <div class="atouts-header">
+    <span class="atouts-tag">Notre Héritage & Origines</span>
+    <h2 class="atouts-title">L'Histoire de Notre Établissement</h2>
+    <p class="atouts-desc">Fondée sur une vision d'excellence et d'innovation, notre école façonne les talents de demain depuis des années en alliant tradition, rigueur et passion du savoir.</p>
+</div>
+
+        <!-- Conteneur de l'image unique mise en valeur -->
+        <div class="atouts-display-box">
+            <div class="atouts-card-luxury">
+                <div class="atouts-image-frame">
+                    <!-- Mettez ici votre image unique avec ses écritures -->
+                    <img src="Images/college.jpg" alt="Nos atouts et engagements">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+</section>
+<section class="about-section" id="apropos">
+    <div class="about-container">
+        
+        <!-- En-tête -->
+        <div class="about-intro">
+            <span class="about-badge">À propos du Collège Royal</span>
+            <h2 class="about-title">L'Excellence au Cœur de Bamako</h2>
+            <p class="about-location">📍 Situé au quartier Mali, en plein cœur de Bamako.</p>
+            <p class="about-lead">Le Collège Royal est un prestigieux complexe scolaire d’excellence.</p>
+        </div>
+
+        <!-- 1ère LIGNE : Image à gauche & Vision à droite -->
+        <div class="about-hero-grid">
+            <div class="about-image-side">
+                <div class="about-img-frame">
+                    <!-- Remplacez le src par le lien de votre image -->
+                    <img src="Images/vision.jpeg" alt="Collège Royal - The 21st Century School">
+                    <div class="about-img-badge">
+                        <span class="number">21e</span>
+                        <span class="text">Siècle</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-right-side">
+                <div class="about-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Notre Vision</h3>
+                    <p>Au collège Royal, notre vision c’est d’être une école du 21e siècle (21st century school) où la réussite est la condition sine qua non à l'entrée et l’excellence celle à la sortie de de chaque élève.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2ème LIGNE : Mission, Devise et Valeurs côte à côte en bas -->
+        <div class="about-bottom-grid">
+            
+            <!-- Carte Mission -->
+            <div class="about-card bottom-card">
+                <div class="card-icon">🚀</div>
+                <h3>Notre Mission</h3>
+                <ul class="mission-list">
+                    <li><span class="highlight">100%</span> Réussite</li>
+                    <li><span class="highlight">100%</span> Mention </li>
+                    <li><span class="highlight">100%</span> Accomplissement</li>
+                    <li><span class="highlight"></span>Pour Tous les élèves</li>
+                </ul>
+            </div>
+
+            <!-- Carte Devise -->
+            <div class="about-card bottom-card">
+                <div class="card-icon">💡</div>
+                <h3>Notre Devise</h3>
+                <p>Au-delà de la devise classique, notre parcours s'articule autour de piliers fondamentaux :</p>
+                <div class="devise-text">
+                    <strong style="color: #00b050;">Savoir…</strong> <br>Excellence academique avec 100% Mention<br>
+                    <strong style="color: #FFC000;">Savoir-faire…</strong><br> Education Civique et Morale avec 100% accomplissement.<br>
+                    <strong style="color: #C00000;">Savoir-être…</strong> <br>Valeurs morales et comportement.
+                </div>
+            </div>
+
+            <!-- Carte Valeurs -->
+            <div class="about-card bottom-card">
+                <div class="card-icon">⭐</div>
+                <h3>Nos Valeurs</h3>
+                <p>Par-dessus tout, nos valeurs se résument ainsi :</p>
+                <ul class="values-list">
+                    <li>✨ <strong>Toujours Faire Plus</strong></li>
+                    <li>✨ <strong>Toujours Faire Mieux</strong></li>
+                    <li>✨ <strong>Toujours Faire Autrement</strong></li>
+                     <li>✨ <strong>Par la Troîka</strong></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="clubs-section">
+    <div class="clubs-container">
+        
+        <!-- En-tête de section -->
+        <div class="clubs-header">
+            <span class="clubs-tag">Vie Étudiante & Passion</span>
+            <h2 class="clubs-title">Explorez Nos Clubs Actifs</h2>
+            <p class="clubs-desc">Au-delà des salles de classe, exprimez vos talents, développez de nouvelles compétences et rejoignez une communauté qui vous ressemble.</p>
+        </div>
+
+        <!-- Grille asymétrique style Bento -->
+        <div class="clubs-bento-grid">
+            
+            <!-- Club 1 : Grand bloc (Mis en avant) -->
+            <div class="club-card club-large">
+                <img src="Images/avecLeBlanc.png" alt="Club Robotique & Innovation">
+                <div class="club-overlay">
+                    <div class="club-badge">Technologie</div>
+                    <h3>Club Robotique & Innovation</h3>
+                    <p>Concevez, programmez et pilotez des robots autonomes pour des compétitions nationales.</p>
+                </div>
+            </div>
+
+            <!-- Club 2 : Bloc standard -->
+            <div class="club-card">
+                <img src="Images/cafe.jpg" alt="Club de Débat & Éloquence">
+                <div class="club-overlay">
+                    <div class="club-badge">Expression</div>
+                    <h3>Café Litteraire</h3>
+                    <p>Maîtrisez l'art oratoire et affûtez votre esprit critique à travers des joutes verbales stimulantes.</p>
+                </div>
+            </div>
+
+            <!-- Club 3 : Bloc standard -->
+            <div class="club-card">
+                <img src="Images/sciences.jpg" alt="Club Arts & Culture">
+                <div class="club-overlay">
+                    <div class="club-badge">Créativité</div>
+                    <h3>Café Scientifique</h3>
+                    <p>Peinture, théâtre, musique : un espace d'expression libre pour révéler l'artiste en vous.</p>
+                </div>
+            </div>
+
+            <!-- Club 4 : Grand bloc horizontal -->
+            <div class="club-card club-wide">
+                <img src="Images/baby.jpg" alt="Association Sportive">
+                <div class="club-overlay">
+                    <div class="club-badge">Sport & Bien-être</div>
+                    <h3>Club Olympique</h3>
+                    <p>Football, basketball, athlétisme : cultivez l'esprit d'équipe et dépassez vos limites physiques dans nos tournois inter-établissements.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section class="activities-section">
+    <div class="activities-container">
+        
+        <!-- En-tête de section -->
+        <div class="activities-header">
+            <span class="activities-tag">Dynamisme & Expérience</span>
+            <h2 class="activities-title">Plongez au Cœur de Nos Activités</h2>
+            <p class="activities-desc">Un aperçu vivant de notre quotidien à travers des ateliers pratiques, des séminaires et des moments de partage inoubliables.</p>
+        </div>
+
+        <!-- Conteneur des cartes interactives (Effet Accordéon horizontal) -->
+        <div class="activities-accordion">
+            
+            <!-- Activité 1 -->
+            <div class="activity-panel active" style="background-image: url('Images/sport.jpg');">
+                <div class="activity-overlay"></div>
+                <div class="activity-content">
+                    <span class="activity-number">01</span>
+                    <div class="activity-text">
+                        <h3>Education  Sportive</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activité 2 -->
+            <div class="activity-panel" style="background-image: url('Images/sortie.jpg');">
+                <div class="activity-overlay"></div>
+                <div class="activity-content">
+                    <span class="activity-number">02</span>
+                    <div class="activity-text">
+                        <h3>Sortie Scolaire</h3>
+                        <p>Rencontres régulières avec des experts et des leaders de l'industrie pour élargir vos horizons.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activité 3 -->
+            <div class="activity-panel" style="background-image: url('Images/MaliTourisme.jpg');">
+                <div class="activity-overlay"></div>
+                <div class="activity-content">
+                    <span class="activity-number">03</span>
+                    <div class="activity-text">
+                        <h3>Sorties Pédagogiques & Stages</h3>
+                        <p>Immersion sur le terrain, visites d'entreprises et mise en situation réelle professionnelle.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activité 4 -->
+            <div class="activity-panel" style="background-image: url('Images/basket.jpg');">
+                <div class="activity-overlay"></div>
+                <div class="activity-content">
+                    <span class="activity-number">04</span>
+                    <div class="activity-text">
+                        <h3>Événements & Compétitions</h3>
+                        <p>Hackathons, tournois sportifs et festivals culturels pour stimuler l'esprit d'équipe.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section class="infrastructures-zigzag">
+    <div class="zigzag-container">
+        
+        <!-- En-tête de section -->
+        <div class="zigzag-header">
+            <span class="zigzag-tag">Environnement d'Apprentissage</span>
+            <h2 class="zigzag-title">Nos Infrastructures de Pointe</h2>
+            <p class="zigzag-desc">Des espaces modernes et connectés, pensés pour offrir aux étudiants un cadre d'étude idéal et stimulant.</p>
+        </div>
+
+        <!-- Bloc 1 : Salle Informatique (Image à gauche, Texte à droite) -->
+        <div class="zigzag-row">
+            <div class="zigzag-img-box">
+                <img src="Images/Informa.jpg" alt="Salle Informatique">
+                <span class="zigzag-number">01</span>
+            </div>
+            <div class="zigzag-text-box">
+                <span class="zigzag-category">Technologie & Innovation</span>
+                <h3>Salle Informatique</h3>
+                <p>Dotée de postes de travail ultra-performants et d'une connexion haut débit permanente, notre salle informatique offre un accès illimité aux outils numériques et logiciels professionnels pour tous les étudiants.</p>
+            </div>
+        </div>
+
+        <!-- Bloc 2 : Bibliothèque (Texte à gauche, Image à droite - Inversé) -->
+        <div class="zigzag-row reverse">
+            <div class="zigzag-img-box">
+                <img src="Images/bibliotheque.jpeg" alt="Bibliothèque">
+                <span class="zigzag-number">02</span>
+            </div>
+            <div class="zigzag-text-box">
+                <span class="zigzag-category">Savoir & Documentation</span>
+                <h3>Bibliothèque</h3>
+                <p>Un espace calme, baigné de lumière naturelle et propice à la concentration. Elle abrite un vaste catalogue d'ouvrages spécialisés, de revues scientifiques et des zones de travail en groupe.</p>
+            </div>
+        </div>
+
+        <!-- Bloc 3 : Salle Moderne (Image à gauche, Texte à droite) -->
+        <div class="zigzag-row">
+            <div class="zigzag-img-box">
+                <img src="Images/salle.jpeg" alt="Salle Moderne">
+                <span class="zigzag-number">03</span>
+            </div>
+            <div class="zigzag-text-box">
+                <span class="zigzag-category">Pédagogie Interactive</span>
+                <h3>Salle Moderne</h3>
+                <p>Aménagées avec des équipements tactiles et interactifs, nos salles de cours modernes favorisent l'interactivité, le travail collaboratif et une immersion totale dans l'apprentissage.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="cycles">
+
+    <div class="section-title">
+
+        <h2>Nos Ordres d'enseignement</h2>
+
+        <p>
+            Le Collège Royal accompagne les élèves tout au long de leur parcours scolaire,
+            de la petite enfance jusqu'au lycée.
+        </p>
+
+    </div>
+
+    <!-- Jardin d'enfant -->
+
+    <div class="cycle-card">
+
+        <div class="cycle-image">
+
+            <img src="Images/jadrin.jpeg" alt="Jardin d'enfant">
+
+        </div>
+
+        <div class="cycle-content">
+
+            <h3>🌱 Jardin d'Enfant</h3>
+
+            <p>
+                Le jardin d'enfant accueille les tout-petits dans un environnement
+                sécurisé et stimulant où ils développent leur autonomie, leur créativité
+                et leurs premières connaissances.
+            </p>
+
+            <ul>
+
+                <li>✔ Éveil et motricité</li>
+
+                <li>✔ Activités éducatives</li>
+
+                <li>✔ Développement social</li>
+
+                <li>✔ Encadrement qualifié</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Premier cycle -->
+
+    <div class="cycle-card reverse">
+
+        <div class="cycle-image">
+
+            <img src="Images/premierCycle.jpeg" alt="Premier cycle">
+
+        </div>
+
+        <div class="cycle-content">
+
+            <h3>📚 Premier Cycle</h3>
+
+            <p>
+                Les élèves acquièrent les bases essentielles en français,
+                mathématiques, sciences et culture générale dans un cadre
+                favorisant la réussite.
+            </p>
+
+            <ul>
+
+                <li>✔ Lecture et écriture</li>
+
+                <li>✔ Mathématiques</li>
+
+                <li>✔ Sciences</li>
+
+                <li>✔ Activités sportives</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Second cycle -->
+
+    <div class="cycle-card">
+
+        <div class="cycle-image">
+
+            <img src="Images/secondCycle.jpeg" alt="Second cycle">
+
+        </div>
+
+        <div class="cycle-content">
+
+            <h3>🎓 Second Cycle</h3>
+
+            <p>
+                Cette étape prépare les élèves aux examens nationaux grâce à
+                un enseignement rigoureux et un suivi pédagogique personnalisé.
+            </p>
+
+            <ul>
+
+                <li>✔ Préparation au DEF</li>
+
+                <li>✔ Laboratoires</li>
+
+                <li>✔ Suivi pédagogique</li>
+
+                <li>✔ Activités culturelles</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Lycée -->
+
+    <div class="cycle-card reverse">
+
+        <div class="cycle-image">
+
+            <img src="Images/lycee.jpeg" alt="Lycée">
+
+        </div>
+
+        <div class="cycle-content">
+
+            <h3>🏆 Lycée</h3>
+
+            <p>
+                Le lycée prépare les élèves au baccalauréat et à leur
+                orientation vers l'enseignement supérieur.
+            </p>
+
+            <ul>
+
+                <li>✔ Préparation au Bac</li>
+
+                <li>✔ Orientation universitaire</li>
+
+                <li>✔ Enseignants expérimentés</li>
+
+                <li>✔ Clubs et activités</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>

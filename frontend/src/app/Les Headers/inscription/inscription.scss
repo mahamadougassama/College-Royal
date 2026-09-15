@@ -1,0 +1,231 @@
+/* --- Style Global de la Section Inscription --- */
+.inscription-section {
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 100px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inscription-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- En-tête --- */
+.inscription-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px auto;
+}
+
+.inscription-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.1);
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+.inscription-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #03652f;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.inscription-lead {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* --- Grille 2 Colonnes --- */
+.inscription-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* --- Côté Image (Hauteur fixe partagée) --- */
+.inscription-image-side {
+    position: relative;
+}
+
+.inscription-img-frame {
+    position: relative;
+    width: 100%;
+    height: 440px; /* HAUTEUR FIXE EXACTE */
+    border-radius: 24px;
+    overflow: hidden;
+    background: beige;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inscription-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Badge flottant sur l'image */
+.inscription-img-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 16px;
+    border-radius: 14px;
+}
+
+.inscription-img-badge .number {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #f59e0b;
+}
+
+.inscription-img-badge .text {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Côté Texte (Même hauteur fixe exacte de 440px) --- */
+.inscription-content-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.inscription-card {
+    background: #0f172a;
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 30px; /* Padding ajusté pour un rendu compact et élégant */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    height: 440px; /* HAUTEUR FIXE EXACTE IDENTIQUE À L'IMAGE */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.inscription-card h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.inscription-card p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Liste des points forts */
+.inscription-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inscription-features li {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.inscription-features span {
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+/* Boutons d'action */
+.inscription-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-main {
+    background: #d97706;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+}
+
+.btn-main:hover {
+    background: #b45309;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+    border-color: #d97706;
+    color: #f59e0b;
+    transform: translateY(-2px);
+}
+
+/* --- Responsive Design (Mobile & Tablettes) --- */
+@media (max-width: 960px) {
+    .inscription-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inscription-img-frame,
+    .inscription-card {
+        height: auto; /* Laisse s'adapter naturellement sur mobile */
+        min-height: unset;
+    }
+
+    .inscription-title {
+        font-size: 2.2rem;
+    }
+
+    .inscription-buttons {
+        flex-direction: column;
+    }
+}

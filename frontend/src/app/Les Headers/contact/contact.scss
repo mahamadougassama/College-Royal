@@ -1,0 +1,291 @@
+.contact {
+
+    padding: 80px 10%;
+
+    background-color: ivory;
+
+}
+
+
+
+.contact-title {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+
+
+.contact-title h2 {
+
+    font-size: 40px;
+
+    color:#0D47A1;
+
+}
+
+
+
+.contact-title p {
+
+    color:#555;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+.contact-container {
+
+    display:flex;
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+
+
+
+
+.contact-info {
+
+    flex:1;
+
+}
+
+
+
+.info-box {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:white;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+
+.info-box span {
+
+    font-size:35px;
+
+}
+
+
+
+.info-box h3 {
+
+    color:#0D47A1;
+
+    margin:0;
+
+}
+
+
+
+.info-box p {
+
+    color:#555;
+
+}
+
+
+
+
+
+.map {
+
+    flex:1;
+
+}
+
+
+
+.map iframe {
+
+    width:100%;
+
+    height:450px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+}
+
+
+
+
+
+.contact-form {
+
+    margin-top:60px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+
+
+.contact-form input,
+.contact-form textarea {
+
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+}
+
+
+
+.contact-form textarea {
+
+    height:150px;
+
+}
+
+
+
+.contact-form button {
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#0D47A1;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
+
+.contact-form button:hover {
+
+    background:#FFC107;
+
+    color:black;
+
+}
+ /* Responsive Contact */
+
+@media(max-width:992px){
+
+
+    .contact-container{
+
+        gap:30px;
+
+    }
+
+
+    .contact{
+
+        padding:60px 5%;
+
+    }
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+    .contact{
+
+        padding:40px 20px;
+
+    }
+
+
+
+    .contact-container{
+
+        flex-direction:column;
+
+    }
+
+
+
+    .contact-info{
+
+        width:100%;
+
+    }
+
+
+
+    .map{
+
+        width:100%;
+
+    }
+
+
+
+    .map iframe{
+
+        width:100%;
+
+        height:300px;
+
+    }
+
+
+
+    .info-box{
+
+        justify-content:center;
+
+    }
+
+
+
+    .contact-form{
+
+        padding:25px;
+
+    }
+
+
+}

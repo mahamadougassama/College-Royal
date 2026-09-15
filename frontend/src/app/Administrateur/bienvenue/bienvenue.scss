@@ -1,0 +1,146 @@
+/* Variables globales pour une cohérence de design */
+$primary-color: #3b82f6;
+$danger-color: #ef4444;
+$danger-hover: #dc2626;
+$text-main: #1e293b;
+$text-muted: #64748b;
+$bg-app: #f8fafc;
+$bg-card: #ffffff;
+$radius: 16px;
+
+.actualites {
+  padding: 40px 20px;
+  background: $bg-app;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  .header-section {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 32px;
+      color: $text-main;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: $text-muted;
+      font-size: 15px;
+    }
+  }
+}
+
+.actualite-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Carte actualité moderne */
+.actualite-card {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* Image fixe à gauche, le reste prend le reste de l'espace */
+  background: $bg-card;
+  border-radius: $radius;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Gestion de l'image */
+  .card-image-wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    overflow: hidden;
+    background: #e2e8f0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+  }
+
+  &:hover .card-image-wrapper img {
+    transform: scale(1.05); /* Effet zoom subtil de l'image au survol de la carte */
+  }
+
+  /* Partie texte et boutons */
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+
+    .text-group {
+      h2 {
+        color: $text-main;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        line-height: 1.4;
+      }
+
+      .content-text {
+        color: $text-muted;
+        font-size: 14px;
+        line-height: 1.6;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Limite le texte à 3 lignes pour garder une belle symétrie */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+
+    .card-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid #f1f5f9;
+
+      .btn-delete {
+        background: rgba($danger-color, 0.1);
+        color: $danger-color;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background: $danger-color;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive design pour les écrans mobiles / tablettes */
+@media (max-width: 768px) {
+  .actualite-card {
+    grid-template-columns: 1fr; /* L'image passe au-dessus et le texte en dessous sur mobile */
+
+    .card-image-wrapper {
+      height: 200px;
+    }
+  }
+}

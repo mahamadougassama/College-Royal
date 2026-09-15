@@ -1,0 +1,31 @@
+<section class="actualites">
+    <div class="header-section">
+        <h1>Dernières actualités</h1>
+        <p class="subtitle">Restez informés des dernières nouveautés de notre établissement</p>
+    </div>
+
+    <div class="actualite-container">
+        <div class="actualite-card" *ngFor="let actualite of bienvenueActualite">
+            
+            <!-- Image à gauche -->
+            <div class="card-image-wrapper">
+                <img [src]="'http://localhost:8080/Image/' + actualite.image" alt="Image de l'actualité">
+            </div>
+
+            <!-- Contenu à droite -->
+            <div class="card-content">
+                <div class="text-group">
+                    <h2>{{ actualite.titre }}</h2>
+                    <p class="content-text">{{ actualite.contenue }}</p>
+                </div>
+
+                <div class="card-actions">
+                    <button class="btn-delete" (click)="supprimer(actualite.id)">
+                        <span class="icon">🗑️</span> Supprimer
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

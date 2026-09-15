@@ -1,0 +1,2799 @@
+.la-page{
+    background-color:ivory !important;
+}
+.hero {
+
+    height: 85vh;
+
+    background-image: 
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url('/Images/Eleve.jpeg');
+
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+}
+
+
+.hero-content {
+
+    max-width: 900px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.hero h1 {
+
+    font-size: 55px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero p {
+
+    font-size: 22px;
+
+    max-width: 700px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+
+}
+/* Conteneur des boutons */
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+/* Style général des boutons */
+.hero-buttons a {
+
+    text-decoration: none;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+
+}
+
+
+/* Bouton inscription */
+.btn-primary {
+
+    background-color: #FFC107;
+
+    color: #000;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+}
+
+
+.btn-primary:hover {
+
+    background-color: white;
+
+    transform: translateY(-5px);
+    
+
+}
+
+
+/* Bouton actualité */
+.btn-secondary {
+
+    border: 2px solid white;
+
+    color: white;
+
+    background: transparent;
+    cursor: pointer;
+
+}
+
+
+.btn-secondary:hover {
+
+    background-color: white;
+
+    color: #0D47A1;
+
+    transform: translateY(-5px);
+
+}
+/* Responsive Hero */
+
+@media(max-width:992px){
+
+    .hero{
+
+        height:75vh;
+
+    }
+
+
+    .hero h1{
+
+        font-size:45px;
+
+    }
+
+
+    .hero p{
+
+        font-size:20px;
+
+        padding:0 20px;
+
+    }
+
+
+    .hero-buttons a{
+
+        padding:13px 30px;
+
+        font-size:16px;
+
+    }
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+    .hero{
+
+        height:auto;
+
+        min-height:80vh;
+
+        padding:40px 20px;
+
+    }
+
+
+
+    .hero-content{
+
+        width:100%;
+
+    }
+
+
+
+    .hero h1{
+
+        font-size:32px;
+
+        margin-bottom:15px;
+
+    }
+
+
+
+    .hero p{
+
+        font-size:16px;
+
+        line-height:1.5;
+
+        margin-bottom:25px;
+
+    }
+
+
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        width:100%;
+
+    }
+
+
+
+    .hero-buttons a{
+
+        width:80%;
+
+        text-align:center;
+
+        padding:12px 20px;
+
+        font-size:16px;
+
+    }
+
+
+}
+/* --- Style global de la section --- */
+.director-section {
+    background-color: beige; /* Fond gris très clair, tendance */
+    padding: 80px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e293b;
+}
+
+.director-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* --- Colonne Visuelle (Photo) --- */
+.director-visual {
+    flex: 0 0 40%;
+    position: relative;
+}
+
+.image-box {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-box:hover img {
+    transform: scale(1.03); /* Léger zoom élégant au survol */
+}
+
+/* Petit badge flottant sur la photo */
+.experience-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #0f172a;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.experience-badge .number {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #38bdf8; /* Touche de couleur moderne (Bleu clair) */
+}
+
+.experience-badge .text {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* --- Colonne Contenu --- */
+.director-content {
+    flex: 1;
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: #03652f;
+}
+
+.director-quote {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #475569;
+    font-style: italic;
+    margin-bottom: 30px;
+    position: relative;
+    border-left: 4px solid #2563eb;
+    padding-left: 20px;
+}
+
+/* --- Infos et Signature --- */
+.director-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+}
+
+.director-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+}
+
+.director-info p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Style de secours si pas d'image de signature */
+.fake-signature {
+    font-family: 'Brush Script MT', cursive, sans-serif;
+    font-size: 1.8rem;
+    color: #2563eb;
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 768px) {
+    .director-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .director-visual {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+}
+/* Responsive Mot du Directeur */
+
+@media(max-width:992px){
+
+    .directeur{
+
+        gap:30px;
+
+        padding:50px 5%;
+
+    }
+
+
+    .directeur-image img{
+
+        width:250px;
+
+        height:300px;
+
+    }
+
+
+    .directeur-message h2{
+
+        font-size:30px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:768px){
+
+    .directeur{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:40px 20px;
+
+    }
+
+
+    .directeur-image img{
+
+        width:80%;
+
+        height:auto;
+
+    }
+
+
+    .directeur-message{
+
+        max-width:100%;
+
+    }
+
+
+    .directeur-message h2{
+
+        font-size:26px;
+
+    }
+
+
+    .directeur-message p{
+
+        font-size:16px;
+
+    }
+
+}
+.actualite {
+  padding: 80px 8%;
+  background: #f8fafc;
+}
+
+/* En-tête */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-header span {
+  color: #d4a017;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.section-header h1 {
+  margin: 10px 0;
+  color: #03652f;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.section-header p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* Carte */
+
+.actualite-card {
+  max-width: 1100px;
+  min-height: 400px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 45% 55%;
+
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+  transition: 0.3s ease;
+}
+
+.actualite-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* Image */
+
+.actualite-image {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.actualite-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.actualite-card:hover .actualite-image img {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+/* Badge */
+
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  background: #d4a017;
+  color: white;
+
+  padding: 8px 16px;
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Contenu */
+
+.actualite-content {
+  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.date {
+  color: #d4a017;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.actualite-content h2 {
+  color: #123b2a;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.actualite-content p {
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.8;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Bouton */
+
+.actualite-content button {
+  width: fit-content;
+
+  margin-top: 25px;
+
+  padding: 13px 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #123b2a;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.actualite-content button:hover {
+  background: #d4a017;
+  transform: translateX(5px);
+}
+
+.actualite-content button span {
+  margin-left: 8px;
+  font-size: 20px;
+}
+/* =========================
+   SECTION PRINCIPALE
+========================= */
+
+.actualite {
+  width: 100%;
+  padding: 70px 5%;
+  box-sizing: border-box;
+  background: #f8fafc;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 45px;
+
+  span {
+    color: #d4a017;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  h1 {
+    margin: 12px 0;
+
+    color: #12372a;
+
+    font-size: clamp(28px, 5vw, 44px);
+
+    font-weight: 800;
+  }
+
+  p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: clamp(14px, 2vw, 17px);
+  }
+}
+
+
+/* =========================
+   CARTE
+========================= */
+
+.actualite-card {
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+
+  transition: transform 0.4s ease,
+              box-shadow 0.4s ease;
+
+}
+
+
+.actualite-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.actualite-image {
+
+  width: 45%;
+
+  min-height: 400px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+
+}
+
+
+.actualite-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  animation: mouvementImage 12s ease-in-out infinite alternate;
+
+}
+
+
+/* Mouvement léger de l'image */
+
+@keyframes mouvementImage {
+
+  0% {
+
+    transform: scale(1);
+
+  }
+
+  100% {
+
+    transform: scale(1.08);
+
+  }
+
+}
+
+
+/* =========================
+   BADGE
+========================= */
+
+.badge {
+
+  position: absolute;
+
+  top: 20px;
+
+  left: 20px;
+
+  padding: 9px 16px;
+
+  background: #d4a017;
+
+  color: white;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+}
+
+
+/* =========================
+   CONTENU
+========================= */
+
+.actualite-content {
+
+  flex: 1;
+
+  padding: clamp(25px, 5vw, 60px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+}
+
+
+.date {
+
+  color: #15803d;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  margin-bottom: 15px;
+
+}
+
+
+.actualite-content h2 {
+
+  margin: 0 0 20px;
+
+  color: #12372a;
+
+  font-size: clamp(24px, 4vw, 38px);
+
+  line-height: 1.25;
+
+}
+
+
+.actualite-content p {
+
+  margin: 0 0 30px;
+
+  color: #475569;
+
+  font-size: clamp(15px, 2vw, 18px);
+
+  line-height: 1.8;
+
+  overflow-wrap: break-word;
+
+}
+
+
+/* =========================
+   BOUTON
+========================= */
+
+.actualite-content button {
+
+  align-self: flex-start;
+
+  padding: 13px 22px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #12372a;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+}
+
+
+.actualite-content button:hover {
+
+  background: #d4a017;
+
+}
+
+
+.actualite-content button span {
+
+  margin-left: 8px;
+
+  font-size: 20px;
+
+}
+.actualite{
+    background-color: ivory;
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (max-width: 900px) {
+
+  .actualite {
+   
+    padding: 50px 4%;
+
+  }
+
+
+  .actualite-card {
+
+    flex-direction: column;
+
+  }
+
+
+  .actualite-image {
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+
+    aspect-ratio: 16 / 9;
+
+  }
+
+
+  .actualite-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+  }
+
+
+  .actualite-content {
+
+    padding: 35px;
+
+  }
+
+}
+
+
+/* =========================
+   TÉLÉPHONE
+========================= */
+
+@media (max-width: 600px) {
+
+  .actualite {
+
+    padding: 40px 15px;
+
+  }
+
+
+  .section-header {
+
+    margin-bottom: 30px;
+
+  }
+
+
+  .actualite-card {
+
+    border-radius: 15px;
+
+  }
+
+
+  .actualite-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px 18px 0 0;
+}
+
+.actualite-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  /* L'image remplit toujours son conteneur */
+  object-fit: cover;
+
+  /* Animation douce */
+  animation: mouvementImage 12s ease-in-out infinite alternate;
+}
+
+/* Animation de zoom et déplacement */
+@keyframes mouvementImage {
+
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  50% {
+    transform: scale(1.06) translate(-8px, -4px);
+  }
+
+  100% {
+    transform: scale(1.12) translate(8px, 4px);
+  }
+}
+
+
+  .actualite-content {
+
+    padding: 25px 20px;
+
+  }
+
+
+  .actualite-content h2 {
+
+    font-size: 25px;
+
+  }
+
+
+  .actualite-content p {
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+  }
+
+
+  .actualite-content button {
+
+    width: 100%;
+
+    text-align: center;
+
+  }
+
+}
+/* --- Style Global de la Section À Propos --- */
+.about-section {
+    background-color: beige;
+    color: #f8fafc;
+    padding: 100px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- En-tête --- */
+.about-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px auto;
+}
+
+.about-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.about-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #03652f;
+    margin-bottom: 10px;
+}
+
+.about-location {
+    font-size: 1.05rem;
+    color: #475569;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.about-lead {
+    font-size: 1.1rem;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* --- 1ère LIGNE : Image à gauche (entière et taille normale), Vision à droite --- */
+.about-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.about-image-side {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img-frame {
+    position: relative;
+    width: 100%;
+    max-height: 450px; /* Hauteur maximale pour éviter qu'elle ne devienne trop grande */
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(15, 23, 42, 0.05); /* Fond subtil si l'image a des marges */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img-frame img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain; /* MODIFIÉ : Assure que toute l'image s'affiche sans être rognée */
+    display: block;
+}
+
+/* Badge flottant sur l'image */
+.about-img-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 12px 20px;
+    border-radius: 16px;
+}
+
+.about-img-badge .number {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #f59e0b;
+}
+
+.about-img-badge .text {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-right-side {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Design des Cartes Globales --- */
+.about-card {
+    background:grey;
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+}
+
+/* --- 2ème LIGNE : Mission, Devise, Valeurs en bas côte à côte (Vertical) --- */
+.about-bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.bottom-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mission-list, .values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mission-list li, .values-list li {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+.mission-list .highlight {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #f59e0b;
+}
+
+.devise-text {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+.devise-text strong {
+    color: #f59e0b;
+}
+
+/* --- Responsive Design (Mobile & Tablettes) --- */
+@media (max-width: 960px) {
+    .about-hero-grid,
+    .about-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-title {
+        font-size: 2.1rem;
+    }
+}
+/* --- Styles Globaux de la Section --- */
+
+/* --- Style Global de la Section --- */
+.clubs-section {
+    background-color:beige; /* Fond sombre et immersif pour trancher avec les sections précédentes */
+    padding: 100px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+.clubs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- En-tête --- */
+.clubs-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 60px auto;
+}
+
+.clubs-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #38bdf8; /* Bleu clair lumineux */
+    margin-bottom: 12px;
+}
+
+.clubs-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #03652f;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.clubs-desc {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* --- Grille Bento Asymétrique --- */
+.clubs-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+/* --- Style de base des Cartes --- */
+.club-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #1e293b;
+    min-height: 320px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.club-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s ease;
+}
+
+/* Effet de zoom sur l'image au survol */
+.club-card:hover img {
+    transform: scale(1.08);
+}
+
+.club-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Disposition des blocs (Bento Layout) --- */
+/* Club 1 : Occupe 7 colonnes sur 12 */
+.club-card.club-large {
+    grid-column: span 7;
+    min-height: 400px;
+}
+
+/* Club 2 & 3 : Occupent chacun 5 colonnes sur 12 */
+.club-card:not(.club-large):not(.club-wide) {
+    grid-column: span 5;
+}
+
+/* Club 4 : Occupe toute la largeur (12 colonnes) */
+.club-card.club-wide {
+    grid-column: span 12;
+    min-height: 350px;
+}
+
+/* --- Calque de superposition (Gradient + Texte) --- */
+.club-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0) 30%, rgba(15, 23, 42, 0.9) 85%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 35px;
+    z-index: 2;
+}
+
+/* Badge de catégorie flottant sur la carte */
+.club-badge {
+    align-self: flex-start;
+    background: rgba(56, 189, 248, 0.2);
+    backdrop-filter: blur(8px);
+    color: #38bdf8;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.club-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.club-card.club-large .club-overlay h3 {
+    font-size: 1.8rem;
+}
+
+.club-overlay p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 90%;
+}
+
+/* --- Responsive Design (Mobile & Tablettes) --- */
+@media (max-width: 900px) {
+    .clubs-bento-grid {
+        grid-template-columns: 1fr; /* Passage en une seule colonne sur mobile */
+    }
+
+    .club-card.club-large,
+    .club-card:not(.club-large):not(.club-wide),
+    .club-card.club-wide {
+        grid-column: span 1;
+        min-height: 300px;
+    }
+
+    .clubs-title {
+        font-size: 2rem;
+    }
+}
+
+
+
+@media(max-width:900px){
+
+    .chiffres-container{
+
+        flex-wrap:wrap;
+
+    }
+
+}
+/* --- Style Global de la Section --- */
+.activities-section {
+    background-color: #ffffff; /* Retour à un fond lumineux pour contraster avec les clubs */
+    padding: 100px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e293b;
+}
+
+.activities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- En-tête --- */
+.activities-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 60px auto;
+}
+
+.activities-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #4f46e5; /* Violet-bleu moderne */
+    margin-bottom: 12px;
+}
+
+.activities-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #03652f;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.activities-desc {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* --- Accordéon horizontal (Flexbox) --- */
+.activities-accordion {
+    display: flex;
+    gap: 16px;
+    height: 480px;
+    width: 100%;
+}
+
+/* --- Style de chaque panneau --- */
+.activity-panel {
+    position: relative;
+    flex: 1; /* Taille égale par défaut */
+    border-radius: 24px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Effet d'expansion au survol (Desktop) */
+.activity-panel:hover {
+    flex: 3; /* Ce panneau s'élargit grandement */
+    box-shadow: 0 20px 30px rgba(79, 70, 229, 0.2);
+}
+
+/* Supergraduation sombre pour rendre le texte lisible sur l'image */
+.activity-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 20%, rgba(15, 23, 42, 0.9) 90%);
+    transition: background 0.4s ease;
+}
+
+.activity-panel:hover .activity-overlay {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.2) 10%, rgba(15, 23, 42, 0.85) 90%);
+}
+
+/* --- Contenu à l'intérieur du panneau --- */
+.activity-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 2;
+    height: 100%;
+}
+
+.activity-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: auto; /* Pousse le chiffre vers le haut */
+    transition: color 0.4s ease;
+}
+
+.activity-panel:hover .activity-number {
+    color: #818cf8; /* Couleur lumineuse au survol */
+}
+
+.activity-text h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    white-space: nowrap; /* Empêche le texte de se casser bizarrement pendant l'animation */
+}
+
+.activity-text p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+/* Le texte descriptif apparaît uniquement quand on zoome/survole le panneau */
+.activity-panel:hover .activity-text p {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 100px;
+}
+
+/* Optionnel : pour garder le texte court visible si on veut, mais l'effet accordéon cache/affiche le paragraphe */
+
+/* --- Responsive Design (Mobile & Tablettes) --- */
+@media (max-width: 900px) {
+    .activities-accordion {
+        flex-direction: column; /* Passage en mode vertical sur mobile */
+        height: auto;
+    }
+
+    .activity-panel {
+        height: 220px;
+        flex: none !important;
+    }
+
+    .activity-text p {
+        opacity: 1; /* Toujours visible sur mobile puisqu'il n'y a pas de survol (hover) */
+        transform: translateY(0);
+        max-height: none;
+    }
+}
+
+
+
+/* ---------------------- */
+/* TITRE */
+/* ---------------------- */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+    font-size:42px;
+
+    color:#0D47A1;
+
+    margin-bottom:15px;
+
+}
+
+.section-title p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+
+/* ---------------------- */
+/* HISTOIRE */
+/* ---------------------- */
+
+.about-content{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:50px;
+
+    background:ivory;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+    margin-bottom:70px;
+
+}
+
+.about-image{
+
+    flex:1;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    height:380px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+.about-text{
+
+    flex:1;
+
+}
+
+.about-text h3{
+
+    color:#0D47A1;
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+}
+
+.about-text p{
+
+    color:#555;
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+    text-align:justify;
+
+}
+
+
+/* ---------------------- */
+/* LISTE */
+/* ---------------------- */
+
+.about-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.about-list div{
+
+    background:#f5f5f5;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.about-list div:hover{
+
+    background:#FFC107;
+
+    transform:translateY(-5px);
+
+}
+
+
+/* ---------------------- */
+/* VISION */
+/* ---------------------- */
+
+.vision{
+
+    background:green;
+
+    color:white;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.vision h3{
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+}
+
+.vision p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+
+/* ---------------------- */
+/* VALEURS */
+/* ---------------------- */
+
+/* Conteneur principal de la section */
+.valeurs-container {
+    text-align: center;
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+/* Sous-titre de la section */
+.valeurs-container .section-subtitle {
+    color: #0b3c5d;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Boîte contenant l'image */
+.valeurs-image-box {
+    width: 100%;
+    max-width: 900px; /* Largeur maximale sur grand écran */
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background: beige; /* Fond neutre si l'image laisse des espaces sur les côtés */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style pour afficher l'image en entier sans la couper */
+.responsive-valeurs-img {
+    width: 100%;
+    height: auto;           /* S'adapte automatiquement pour respecter les proportions d'origine */
+    max-height: 500px;      /* Empêche l'image d'être trop haute sur les grands écrans */
+    object-fit: contain;    /* GARANTI QUE TOUTE L'IMAGE EST VISIBLE */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Petit effet au survol */
+.valeurs-image-box:hover .responsive-valeurs-img {
+    transform: scale(1.02);
+}
+
+/* -------------------------------------- */
+/* RESPONSIVE POUR LES APPAREILS MOBILES   */
+/* -------------------------------------- */
+
+@media (max-width: 768px) {
+    .valeurs-container .section-subtitle {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .responsive-valeurs-img {
+        max-height: 300px; /* Ajuste la hauteur maximale sur les petits téléphones */
+    }
+}
+
+
+/* ---------------------- */
+/* AMBITIONS */
+/* ---------------------- */
+
+.ambitions{
+
+    background:ivory;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.ambitions h3{
+
+    text-align:center;
+
+    color:green;
+
+    font-size:34px;
+
+    margin-bottom:35px;
+
+}
+
+.objectif{
+
+    background:#f5f5f5;
+
+    padding:18px;
+
+    border-left:6px solid #FFC107;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.objectif:hover{
+
+    background:#eaf3ff;
+
+    transform:translateX(10px);
+
+}
+
+
+/* ---------------------- */
+/* RESPONSIVE */
+/* ---------------------- */
+
+@media(max-width:992px){
+
+    .about-content{
+
+        flex-direction:column;
+
+    }
+
+    .valeurs{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .valeurs{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .about-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+.apropos {
+
+    padding: 80px 8%;
+
+    background-color: ivory;
+
+    text-align: center;
+
+}
+
+
+
+.titre-section h2 {
+
+    font-size: 40px;
+
+    color: green($color: #000000);
+
+}
+
+
+
+.titre-section p {
+
+    font-size: 18px;
+
+    color: #555;
+
+    margin-bottom: 60px;
+
+}
+
+
+
+/* Parties */
+
+.apropos-partie {
+
+    margin-bottom: 80px;
+
+}
+
+
+.apropos-partie > h2 {
+
+    color:green;
+
+    font-size: 32px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+
+/* --- Style Global de la Section --- */
+.infrastructures-zigzag {
+    background-color:beige; /* Fond blanc pur pour un rendu très propre */
+    padding: 100px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e293b;
+}
+
+.zigzag-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- En-tête --- */
+.zigzag-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 80px auto;
+}
+
+.zigzag-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #6366f1; /* Indigo moderne */
+    margin-bottom: 12px;
+}
+
+.zigzag-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #03652f;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.zigzag-desc {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* --- Lignes Zig-Zag --- */
+.zigzag-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+/* Retire la marge du dernier bloc */
+.zigzag-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Inverse l'ordre pour une ligne sur deux (Texte à gauche, Image à droite) */
+.zigzag-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* --- Boîte Image --- */
+.zigzag-img-box {
+    flex: 1;
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 340px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.zigzag-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.zigzag-row:hover .zigzag-img-box img {
+    transform: scale(1.04); /* Léger zoom élégant au survol de la ligne */
+}
+
+/* Grand numéro d'index artistique sur l'image */
+.zigzag-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Boîte Texte --- */
+.zigzag-text-box {
+    flex: 1;
+}
+
+.zigzag-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #6366f1;
+    background: #eef2ff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.zigzag-text-box h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #03652f;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.zigzag-text-box p {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* --- Responsive Design (Mobile & Tablettes) --- */
+@media (max-width: 900px) {
+    .zigzag-row, 
+    .zigzag-row.reverse {
+        flex-direction: column; /* Sur mobile, l'image passe toujours au-dessus et le texte en dessous */
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .zigzag-img-box {
+        width: 100%;
+        height: 260px;
+    }
+
+    .zigzag-title {
+        font-size: 2rem;
+    }
+
+    .zigzag-text-box h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+/* --- Style Global de la Section --- */
+.atouts-section {
+    background-color: beige; /* Fond blanc pur pour une clarté maximale */
+    padding: 100px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e293b;
+}
+
+.atouts-container {
+    max-width: 1000px; /* Largeur idéale pour mettre en valeur une belle image centrale */
+    margin: 0 auto;
+}
+
+/* --- En-tête --- */
+.atouts-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px auto;
+}
+
+.atouts-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.atouts-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #03652f;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.atouts-desc {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* --- Boîte de présentation de l'image --- */
+.atouts-display-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 28px;
+    padding: 20px; /* Crée un effet de cadre / "passe-partout" très design */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.atouts-display-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 35px -10px rgba(37, 99, 235, 0.1), 0 10px 15px -5px rgba(0, 0, 0, 0.04);
+    border-color: #cbd5e1;
+}
+
+/* --- Wrapper de l'image --- */
+.atouts-image-wrapper {
+    border-radius: 18px;
+    overflow: hidden;
+    background: #ffffff;
+    width: 100%;
+}
+
+.atouts-image-wrapper img {
+    width: 100%;
+    height: auto; /* S'adapte naturellement aux proportions de votre image avec du texte */
+    display: block;
+    object-fit: contain; /* Garantit qu'aucune partie du texte de l'image n'est coupée */
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 768px) {
+    .atouts-section {
+        padding: 60px 15px;
+    }
+
+    .atouts-title {
+        font-size: 2rem;
+    }
+
+    .atouts-display-box {
+        padding: 10px; /* Réduit l'espace du cadre sur les petits écrans */
+        border-radius: 20px;
+    }
+
+    .atouts-image-wrapper {
+        border-radius: 12px;
+    }
+}
+/* Ajustements pour les petits mobiles */
+@media (max-width: 480px) {
+  .atouts-image-wrapper {
+    padding: 6px;
+    border-radius: 12px;
+  }
+}
+/* Responsive Atouts */
+
+@media(max-width:992px){
+
+    .atouts-container{
+
+        flex-wrap:wrap;
+
+        gap:25px;
+
+    }
+
+
+    .atout-card{
+
+        width:250px;
+
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+
+    .atouts-container{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:20px;
+
+    }
+
+
+
+    .atout-card{
+
+        width:90%;
+
+        padding:25px;
+
+        text-align:center;
+
+    }
+
+
+
+    .atout-card span{
+
+        font-size:40px;
+
+    }
+
+
+}
+/* --- Style Global de la Section Cycles --- */
+.cycles {
+    background: linear-gradient(135deg, beige);
+    padding: 120px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e293b;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Titre de Section --- */
+.cycles .section-title {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 80px auto;
+}
+
+.cycles .section-title h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #03652f;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.cycles .section-title p {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Cartes des Cycles (Disposition de base) ---
+   On conserve votre classe .cycle-card et .reverse 
+*/
+.cycle-card {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+.cycle-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    border-color: #cbd5e1;
+}
+
+/* --- Inversion pour les classes .reverse --- */
+.cycle-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* --- Visuel / Image du Cycle --- */
+.cycle-image {
+    flex: 1;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.06);
+}
+
+.cycle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.cycle-card:hover .cycle-image img {
+    transform: scale(1.05); /* Effet de zoom fluide au survol de la carte */
+}
+
+/* --- Contenu Texte du Cycle --- */
+.cycle-content {
+    flex: 1.1;
+}
+
+.cycle-content h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #03652f;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.cycle-content > p {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* --- Liste des points clés (✔) --- */
+.cycle-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Affichage en double colonne propre */
+    gap: 12px 20px;
+}
+
+.cycle-content ul li {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #334155;
+    background: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid #edf2f7;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Personnalisation de la puce de validation */
+.cycle-content ul li:hover {
+    background: #0f172a;
+    color: #ffffff;
+}
+
+/* --- Responsive Design (Mobile & Tablettes) --- */
+@media (max-width: 900px) {
+    .cycle-card, 
+    .cycle-card.reverse {
+        flex-direction: column !important; /* L'image passe au-dessus et le texte en dessous partout */
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .cycle-image {
+        width: 100%;
+        height: 240px;
+    }
+
+    .cycles .section-title h2 {
+        font-size: 2.2rem;
+    }
+
+    .cycle-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .cycle-content ul {
+        grid-template-columns: 1fr; /* Passage en une seule colonne sur mobile pour de l'espace */
+    }
+}
+
+
+
+
+/* --- Style Global de la Section "À la Une" (Accueil) --- */
+.featured-news-section {
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 80px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.featured-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* En-tête de section */
+.featured-section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.1);
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+.featured-section-header h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+
+/* --- Carte Principale "À la Une" (Style Horizontal) --- */
+.featured-news-card {
+    background: #0f172a; /* Rappel du thème sombre élégant */
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+    display: grid;
+    grid-template-columns: 1.1fr 1.2fr; /* L'image et le texte se partagent l'espace harmonieusement */
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.featured-news-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+/* --- Conteneur Image --- */
+.featured-img-wrap {
+    position: relative;
+    min-height: 350px;
+    overflow: hidden;
+    background: #1e293b;
+}
+
+.featured-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.featured-news-card:hover .featured-img-wrap img {
+    transform: scale(1.04);
+}
+
+/* Badge "Dernière Actualité" flottant sur l'image */
+.live-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    color: #f59e0b;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* --- Contenu Texte --- */
+.featured-content {
+    padding: 45px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.news-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+    padding: 4px 10px;
+    border-radius: 8px;
+    letter-spacing: 1px;
+}
+
+.news-date {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.featured-content h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.35;
+}
+
+.featured-content p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.65;
+    margin-bottom: 25px;
+}
+
+/* Actions (Boutons) */
+.featured-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-main {
+    background: #d97706;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+}
+
+.btn-main:hover {
+    background: #b45309;
+    transform: translateY(-2px);
+}
+
+.btn-text {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.btn-text:hover {
+    color: #ffffff;
+}
+
+/* --- Responsive Design (Mobile & Tablettes) --- */
+@media (max-width: 900px) {
+    .featured-news-card {
+        grid-template-columns: 1fr; /* Passe l'image au-dessus et le texte en dessous sur mobile */
+    }
+
+    .featured-img-wrap {
+        min-height: 240px;
+    }
+
+    .featured-content {
+        padding: 30px 20px;
+    }
+
+    .featured-section-header h2 {
+        font-size: 1.9rem;
+    }
+
+    .featured-actions {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+}
+
+
+
+/* --- Style de la section Atouts --- */
+.atouts-section {
+    width: 100%;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.atouts-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* En-tête */
+.atouts-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.atouts-tag {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #D4AF37;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    backdrop-filter: blur(6px);
+}
+
+.atouts-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+}
+
+.atouts-desc {
+    font-size: 0.95rem;
+    color: #9ca3af;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* --- Boîte d'affichage de l'image --- */
+.atouts-display-box {
+    width: 100%;
+}
+
+/* --- Écrin de luxe pour l'image unique --- */
+.atouts-card-luxury {
+    background: linear-gradient(145deg, #0d0f17, #06070a);
+    border: 1px solid rgba(212, 175, 55, 0.25); /* Bordure dorée subtile */
+    border-radius: 24px;
+    padding: 20px; /* Crée un effet de cadre / passe-partout élégant */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(212, 175, 55, 0.05);
+    transition: all 0.4s ease;
+}
+
+.atouts-card-luxury:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.6);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 35px rgba(212, 175, 55, 0.15);
+}
+
+.atouts-image-frame {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atouts-image-frame img {
+    width: 100%;
+    height: auto; /* Conserve rigoureusement les proportions et dimensions de votre image avec texte */
+    display: block;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.atouts-card-luxury:hover .atouts-image-frame img {
+    transform: scale(1.01); /* Léger zoom discret au survol */
+}
+
+/* --- Adaptation responsive mobile --- */
+@media (max-width: 768px) {
+    .atouts-card-luxury {
+        padding: 12px;
+    }
+}

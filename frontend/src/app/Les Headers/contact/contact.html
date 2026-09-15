@@ -1,0 +1,154 @@
+<section class="contact">
+
+
+    <div class="contact-title">
+
+        <h2>
+            Contactez-nous
+        </h2>
+
+        <p>
+            Nous sommes à votre disposition pour répondre
+            à toutes vos questions.
+        </p>
+
+    </div>
+
+
+
+    <div class="contact-container">
+
+
+        <!-- Informations -->
+
+        <div class="contact-info">
+
+
+            <div class="info-box">
+
+                <span>📍</span>
+
+                <div>
+                    <h3>
+                        Adresse
+                    </h3>
+
+                    <p>
+                        Collège Royal Bamako, Mali
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <span>📞</span>
+
+                <div>
+                    <h3>
+                        Téléphone
+                    </h3>
+
+                    <p>
+                        +223 71 71 09 09
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <span>✉</span>
+
+                <div>
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+                        contact@collegeroyal.com
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <span>🕒</span>
+
+                <div>
+                    <h3>
+                        Horaires
+                    </h3>
+
+                    <p>
+                        Lundi - Samedi : 08h - 17h
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- Localisation -->
+
+        <div class="map">
+
+
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.576210732114!2d-7.998792926797572!3d12.610157922703392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe51cd7609b46427%3A0xd87ac6eb6ce29a03!2sCOLLEGE%20ROYAL!5e0!3m2!1sfr!2sml!4v1784104308184!5m2!1sfr!2sml" 
+            width="600" 
+            height="450"
+             style="border:0;"
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="strict-origin-when-cross-origin">
+              </iframe>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- Formulaire -->
+
+    <div class="contact-form">
+
+
+        <h2>
+            Envoyez-nous un message
+        </h2>
+
+
+        <input type="text" placeholder="Votre nom" name="nom" [(ngModel)]="contact.nom">
+
+
+        <input type="email" placeholder="Votre email" name="email" [(ngModel)]="contact.email">
+
+
+        <textarea placeholder="Votre message" name="message" [(ngModel)]="contact.message"></textarea>
+
+
+        <button (click)="envoyer()">
+            Envoyer
+        </button>
+
+
+    </div>
+
+
+</section>
