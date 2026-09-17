@@ -2,7 +2,7 @@ services:
   # 1. Base de données MySQL
   db:
     image: mysql:8.0
-    container_name: mysql_ecole
+    container_name: mysql_ecole1
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
