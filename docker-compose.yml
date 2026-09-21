@@ -21,7 +21,7 @@ services:
 
   # 2. Backend Spring Boot
   backend:
-    build: ./backend
+    build: ./Backend
     container_name: ecole_backend
     restart: unless-stopped
     environment:
