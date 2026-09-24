@@ -1265,6 +1265,26 @@
     color: #f59e0b;
 }
 
+/* --- S'assurer que l'image dans l'icône prend la taille parfaite --- */
+.card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Garde les proportions de votre logo/image */
+    display: block;
+}
+
+/* Si votre classe .card-icon n'a pas encore de taille fixe définie, 
+   ajoutez ceci pour garantir qu'elle a le même gabarit que les émojis : */
+.card-icon {
+    width: 50px;  /* Ajustez selon la taille de vos émojis (ex: 45px ou 50px) */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px; /* Espace sous l'icône */
+}
+
+
 /* --- Responsive Design (Mobile & Tablettes) --- */
 @media (max-width: 960px) {
     .about-hero-grid,
