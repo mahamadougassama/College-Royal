@@ -2146,12 +2146,16 @@
 }
 
 /* --- Responsive Design (Mobile & Tablettes) --- */
+/* --- Responsive Design (Mobile & Tablettes) --- */
 @media (max-width: 900px) {
-    .zigzag-row, 
-    .zigzag-row.reverse {
-        flex-direction: column; /* Sur mobile, l'image passe toujours au-dessus et le texte en dessous */
+    .zigzag-row {
+        flex-direction: column-reverse; /* Le texte (qui est le 2ème élément) passe en haut, et l'image en bas */
         gap: 30px;
         margin-bottom: 50px;
+    }
+
+    .zigzag-row.reverse {
+        flex-direction: column-reverse; /* S'assure que même pour les lignes inversées, le texte reste en haut et l'image en bas sur mobile */
     }
 
     .zigzag-img-box {
@@ -2167,7 +2171,6 @@
         font-size: 1.5rem;
     }
 }
-
 
 
 
